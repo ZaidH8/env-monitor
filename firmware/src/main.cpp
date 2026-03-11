@@ -10,7 +10,7 @@ int main() {
 
     // Open the GPIO chip
     // Change "gpiochip4" to "gpiochip0" if you have a Pi 4
-    gpiod_chip* chip = gpiod_chip_open_by_name("gpiochip4");
+    gpiod_chip* chip = gpiod_chip_open_by_name("gpiochip0");
     if (!chip) {
         std::cerr << "ERROR: Could not open GPIO chip. Are you running as root?\n";
         return 1;
