@@ -1,0 +1,3 @@
+/home/zaid/env-monitor/firmware/build/CMakeFiles/sensor_daemon.dir
+/home/zaid/env-monitor/firmware/build/CMakeFiles/edit_cache.dir
+/home/zaid/env-monitor/firmware/build/CMakeFiles/rebuild_cache.dir

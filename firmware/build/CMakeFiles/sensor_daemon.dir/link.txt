@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sensor_daemon.dir/src/main.cpp.o CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o CMakeFiles/sensor_daemon.dir/src/sensors/dht22.cpp.o -o sensor_daemon  -lgpiod 
