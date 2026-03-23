@@ -153,6 +153,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_daemon.dir/build.make CMakeFiles/sensor_daemon.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/mqtt_publisher.o: src/mqtt_publisher.cpp.o
+.PHONY : src/mqtt_publisher.o
+
+# target to build an object file
+src/mqtt_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_daemon.dir/build.make CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.o
+.PHONY : src/mqtt_publisher.cpp.o
+
+src/mqtt_publisher.i: src/mqtt_publisher.cpp.i
+.PHONY : src/mqtt_publisher.i
+
+# target to preprocess a source file
+src/mqtt_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_daemon.dir/build.make CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.i
+.PHONY : src/mqtt_publisher.cpp.i
+
+src/mqtt_publisher.s: src/mqtt_publisher.cpp.s
+.PHONY : src/mqtt_publisher.s
+
+# target to generate assembly for a file
+src/mqtt_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_daemon.dir/build.make CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.s
+.PHONY : src/mqtt_publisher.cpp.s
+
 src/sensors/dht22.o: src/sensors/dht22.cpp.o
 .PHONY : src/sensors/dht22.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mqtt_publisher.o"
+	@echo "... src/mqtt_publisher.i"
+	@echo "... src/mqtt_publisher.s"
 	@echo "... src/sensors/dht22.o"
 	@echo "... src/sensors/dht22.i"
 	@echo "... src/sensors/dht22.s"

@@ -81,12 +81,12 @@ clean: CMakeFiles/sensor_daemon.dir/clean
 CMakeFiles/sensor_daemon.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_daemon.dir/build.make CMakeFiles/sensor_daemon.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_daemon.dir/build.make CMakeFiles/sensor_daemon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zaid/env-monitor/firmware/build/CMakeFiles --progress-num=1,2,3,4 "Built target sensor_daemon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zaid/env-monitor/firmware/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target sensor_daemon"
 .PHONY : CMakeFiles/sensor_daemon.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sensor_daemon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zaid/env-monitor/firmware/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zaid/env-monitor/firmware/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_daemon.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zaid/env-monitor/firmware/build/CMakeFiles 0
 .PHONY : CMakeFiles/sensor_daemon.dir/rule

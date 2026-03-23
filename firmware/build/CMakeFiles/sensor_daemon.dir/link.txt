@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/sensor_daemon.dir/src/main.cpp.o CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o CMakeFiles/sensor_daemon.dir/src/sensors/dht22.cpp.o -o sensor_daemon  -lgpiod 
+/usr/bin/c++ CMakeFiles/sensor_daemon.dir/src/main.cpp.o CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o CMakeFiles/sensor_daemon.dir/src/sensors/dht22.cpp.o CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.o -o sensor_daemon  -lgpiod -lpaho-mqtt3c -lpaho-mqtt3as -lpaho-mqttpp3 

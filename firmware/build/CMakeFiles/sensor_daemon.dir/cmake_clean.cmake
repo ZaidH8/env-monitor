@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sensor_daemon.dir/src/main.cpp.o"
   "CMakeFiles/sensor_daemon.dir/src/main.cpp.o.d"
+  "CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.o"
+  "CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.o.d"
   "CMakeFiles/sensor_daemon.dir/src/sensors/dht22.cpp.o"
   "CMakeFiles/sensor_daemon.dir/src/sensors/dht22.cpp.o.d"
   "CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o"

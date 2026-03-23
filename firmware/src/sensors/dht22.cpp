@@ -1,7 +1,10 @@
 #include "dht22.h"
-#include <chrono>
-#include <thread>
 #include <iostream>
+#include <sstream>
+#include <array>
+#include <memory>
+#include <stdexcept>
+#include <string>
 
 DHT22::DHT22(gpiod_chip* chip, int data_pin) {
     this->chip = chip;
@@ -12,112 +15,49 @@ DHT22::~DHT22() {}
 
 ClimateReading DHT22::read() {
     ClimateReading result = {0.0f, 0.0f, false};
-    uint8_t data[5] = {0, 0, 0, 0, 0};
 
-    // === SEND START SIGNAL ===
-    gpiod_line* line = gpiod_chip_get_line(chip, pin_number);
-    gpiod_line_request_output(line, "dht22", 1);
-    std::this_thread::sleep_for(std::chrono::milliseconds(500)); // let it settle
-    gpiod_line_set_value(line, 0);
-    std::this_thread::sleep_for(std::chrono::milliseconds(20));  // longer low pulse
-    gpiod_line_set_value(line, 1);
-    std::this_thread::sleep_for(std::chrono::microseconds(40));  // brief high before release
+    // Call the Python script and capture output
+    std::array<char, 128> buffer;
+    std::string output;
 
-    // Switch to input
-    gpiod_line_release(line);
-    line = gpiod_chip_get_line(chip, pin_number);
-    gpiod_line_request_input(line, "dht22");
-    std::this_thread::sleep_for(std::chrono::microseconds(10));
-
-    // === WAIT FOR SENSOR RESPONSE ===
-    auto start = std::chrono::high_resolution_clock::now();
-    auto timeout = [&]() {
-        return std::chrono::duration_cast<std::chrono::microseconds>(
-            std::chrono::high_resolution_clock::now() - start).count() > 10000;
-    };
-
-    // Wait for LOW
-    start = std::chrono::high_resolution_clock::now();
-    while (gpiod_line_get_value(line) == 1) {
-        if (timeout()) {
-            std::cerr << "DHT22: no response (check wiring and pull-up resistor)\n";
-            gpiod_line_release(line);
-            return result;
-        }
-    }
-
-    // Wait for HIGH
-    start = std::chrono::high_resolution_clock::now();
-    while (gpiod_line_get_value(line) == 0) {
-        if (timeout()) {
-            std::cerr << "DHT22: stuck LOW\n";
-            gpiod_line_release(line);
-            return result;
-        }
-    }
-
-    // Wait for HIGH to end
-    start = std::chrono::high_resolution_clock::now();
-    while (gpiod_line_get_value(line) == 1) {
-        if (timeout()) {
-            std::cerr << "DHT22: stuck HIGH\n";
-            gpiod_line_release(line);
-            return result;
-        }
-    }
-
-    // === READ 40 BITS ===
-    for (int i = 0; i < 40; i++) {
-        // Wait for LOW to end
-        start = std::chrono::high_resolution_clock::now();
-        while (gpiod_line_get_value(line) == 0) {
-            if (timeout()) {
-                std::cerr << "DHT22: timeout reading bit " << i << "\n";
-                gpiod_line_release(line);
-                return result;
-            }
-        }
-
-        // Measure HIGH duration
-        auto high_start = std::chrono::high_resolution_clock::now();
-        start = std::chrono::high_resolution_clock::now();
-        while (gpiod_line_get_value(line) == 1) {
-            if (timeout()) {
-                std::cerr << "DHT22: timeout during HIGH bit " << i << "\n";
-                gpiod_line_release(line);
-                return result;
-            }
-        }
-        auto high_duration = std::chrono::duration_cast<std::chrono::microseconds>(
-            std::chrono::high_resolution_clock::now() - high_start).count();
-
-        data[i / 8] <<= 1;
-        if (high_duration > 40) {
-            data[i / 8] |= 1;
-        }
-    }
-
-    gpiod_line_release(line);
-
-    // === VERIFY CHECKSUM ===
-    uint8_t checksum = data[0] + data[1] + data[2] + data[3];
-    if (checksum != data[4]) {
-        std::cerr << "DHT22: checksum failed\n";
+    FILE* pipe = popen("/home/zaid/env-monitor/backend/venv/bin/python3 /home/zaid/env-monitor/firmware/read_dht22.py", "r");
+    if (!pipe) {
+        std::cerr << "DHT22: failed to run Python script\n";
         return result;
     }
 
-    // === DECODE ===
-    result.humidity_percent = ((data[0] << 8) | data[1]) / 10.0f;
-    int16_t raw_temp = ((data[2] & 0x7F) << 8) | data[3];
-    result.temperature_c = raw_temp / 10.0f;
-    if (data[2] & 0x80) result.temperature_c *= -1;
+    while (fgets(buffer.data(), buffer.size(), pipe) != nullptr) {
+        output += buffer.data();
+    }
+    pclose(pipe);
 
-    if (result.humidity_percent < 0 || result.humidity_percent > 100 ||
-        result.temperature_c < -40 || result.temperature_c > 80) {
-        std::cerr << "DHT22: reading out of range\n";
+    // Remove trailing newline
+    if (!output.empty() && output.back() == '\n') {
+        output.pop_back();
+    }
+
+    if (output == "ERROR" || output.empty()) {
+        std::cerr << "DHT22: Python script returned error\n";
         return result;
     }
 
-    result.valid = true;
+    // Parse "temperature,humidity"
+    std::stringstream ss(output);
+    std::string temp_str, humidity_str;
+
+    if (!std::getline(ss, temp_str, ',') || !std::getline(ss, humidity_str)) {
+        std::cerr << "DHT22: failed to parse output: " << output << "\n";
+        return result;
+    }
+
+    try {
+        result.temperature_c = std::stof(temp_str);
+        result.humidity_percent = std::stof(humidity_str);
+        result.valid = true;
+    } catch (...) {
+        std::cerr << "DHT22: failed to convert values\n";
+        return result;
+    }
+
     return result;
 }

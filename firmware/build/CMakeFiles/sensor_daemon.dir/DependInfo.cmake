@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/zaid/env-monitor/firmware/src/main.cpp" "CMakeFiles/sensor_daemon.dir/src/main.cpp.o" "gcc" "CMakeFiles/sensor_daemon.dir/src/main.cpp.o.d"
+  "/home/zaid/env-monitor/firmware/src/mqtt_publisher.cpp" "CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.o" "gcc" "CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.o.d"
   "/home/zaid/env-monitor/firmware/src/sensors/dht22.cpp" "CMakeFiles/sensor_daemon.dir/src/sensors/dht22.cpp.o" "gcc" "CMakeFiles/sensor_daemon.dir/src/sensors/dht22.cpp.o.d"
   "/home/zaid/env-monitor/firmware/src/sensors/hcsr04.cpp" "CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o" "gcc" "CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o.d"
   )
