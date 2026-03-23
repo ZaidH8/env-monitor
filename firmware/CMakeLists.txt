@@ -13,4 +13,5 @@ add_executable(sensor_daemon
 
 # Link GPIO and MQTT libraries
 target_link_libraries(sensor_daemon gpiod paho-mqtt3c paho-mqtt3as paho-mqttpp3)
+
 target_include_directories(sensor_daemon PRIVATE src)

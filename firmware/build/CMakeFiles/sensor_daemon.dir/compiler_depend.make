@@ -199,8 +199,212 @@ CMakeFiles/sensor_daemon.dir/src/main.cpp.o: /home/zaid/env-monitor/firmware/src
   /usr/include/gpiod.h \
   /usr/lib/gcc/aarch64-linux-gnu/12/include/stdbool.h \
   /usr/include/c++/12/stdlib.h \
+  /usr/include/nlohmann/json.hpp \
+  /usr/include/c++/12/algorithm \
+  /usr/include/c++/12/bits/stl_algo.h \
+  /usr/include/c++/12/bits/algorithmfwd.h \
+  /usr/include/c++/12/bits/stl_heap.h \
+  /usr/include/c++/12/bits/stl_tempbuf.h \
+  /usr/include/c++/12/bits/uniform_int_dist.h \
+  /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/12/pstl/execution_defs.h \
+  /usr/include/c++/12/cstddef \
+  /usr/include/c++/12/functional \
+  /usr/include/c++/12/bits/std_function.h \
+  /usr/include/c++/12/unordered_map \
+  /usr/include/c++/12/ext/aligned_buffer.h \
+  /usr/include/c++/12/bits/hashtable.h \
+  /usr/include/c++/12/bits/hashtable_policy.h \
+  /usr/include/c++/12/bits/enable_special_members.h \
+  /usr/include/c++/12/bits/node_handle.h \
+  /usr/include/c++/12/bits/unordered_map.h \
+  /usr/include/c++/12/bits/erase_if.h \
+  /usr/include/c++/12/vector \
+  /usr/include/c++/12/bits/stl_uninitialized.h \
+  /usr/include/c++/12/bits/stl_vector.h \
+  /usr/include/c++/12/bits/stl_bvector.h \
+  /usr/include/c++/12/bits/vector.tcc \
+  /usr/include/c++/12/array \
+  /usr/include/c++/12/compare \
+  /usr/include/c++/12/iterator \
+  /usr/include/c++/12/bits/stream_iterator.h \
+  /usr/include/c++/12/memory \
+  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/12/bits/align.h \
+  /usr/include/c++/12/bit \
+  /usr/include/c++/12/bits/shared_ptr.h \
+  /usr/include/c++/12/bits/shared_ptr_base.h \
+  /usr/include/c++/12/bits/allocated_ptr.h \
+  /usr/include/c++/12/ext/concurrence.h \
+  /usr/include/c++/12/bits/shared_ptr_atomic.h \
+  /usr/include/c++/12/bits/atomic_base.h \
+  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/12/backward/auto_ptr.h \
+  /usr/include/c++/12/pstl/glue_memory_defs.h \
+  /usr/include/c++/12/numeric \
+  /usr/include/c++/12/bits/stl_numeric.h \
+  /usr/include/c++/12/pstl/glue_numeric_defs.h \
+  /usr/include/c++/12/utility \
+  /usr/include/c++/12/bits/stl_relops.h \
+  /usr/include/nlohmann/adl_serializer.hpp \
+  /usr/include/nlohmann/detail/abi_macros.hpp \
+  /usr/include/nlohmann/detail/conversions/from_json.hpp \
+  /usr/include/c++/12/forward_list \
+  /usr/include/c++/12/bits/forward_list.h \
+  /usr/include/c++/12/bits/forward_list.tcc \
+  /usr/include/c++/12/map \
+  /usr/include/c++/12/bits/stl_tree.h \
+  /usr/include/c++/12/bits/stl_map.h \
+  /usr/include/c++/12/bits/stl_multimap.h \
+  /usr/include/c++/12/valarray \
+  /usr/include/c++/12/cmath \
+  /usr/include/math.h \
+  /usr/include/aarch64-linux-gnu/bits/math-vector.h \
+  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-logb.h \
+  /usr/include/aarch64-linux-gnu/bits/fp-fast.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls.h \
+  /usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/aarch64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/tr1/gamma.tcc \
+  /usr/include/c++/12/tr1/special_function_util.h \
+  /usr/include/c++/12/tr1/bessel_function.tcc \
+  /usr/include/c++/12/tr1/beta_function.tcc \
+  /usr/include/c++/12/tr1/ell_integral.tcc \
+  /usr/include/c++/12/tr1/exp_integral.tcc \
+  /usr/include/c++/12/tr1/hypergeometric.tcc \
+  /usr/include/c++/12/tr1/legendre_function.tcc \
+  /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/12/tr1/poly_hermite.tcc \
+  /usr/include/c++/12/tr1/poly_laguerre.tcc \
+  /usr/include/c++/12/tr1/riemann_zeta.tcc \
+  /usr/include/c++/12/bits/valarray_array.h \
+  /usr/include/c++/12/bits/valarray_array.tcc \
+  /usr/include/c++/12/bits/valarray_before.h \
+  /usr/include/c++/12/bits/slice_array.h \
+  /usr/include/c++/12/bits/valarray_after.h \
+  /usr/include/c++/12/bits/gslice.h \
+  /usr/include/c++/12/bits/gslice_array.h \
+  /usr/include/c++/12/bits/mask_array.h \
+  /usr/include/c++/12/bits/indirect_array.h \
+  /usr/include/nlohmann/detail/exceptions.hpp \
+  /usr/include/nlohmann/detail/value_t.hpp \
+  /usr/include/nlohmann/detail/macro_scope.hpp \
+  /usr/include/nlohmann/detail/meta/detected.hpp \
+  /usr/include/nlohmann/detail/meta/void_t.hpp \
+  /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /usr/include/c++/12/version \
+  /usr/include/c++/12/cassert \
+  /usr/include/assert.h \
+  /usr/include/nlohmann/detail/string_escape.hpp \
+  /usr/include/nlohmann/detail/input/position_t.hpp \
+  /usr/include/nlohmann/detail/meta/cpp_future.hpp \
+  /usr/include/nlohmann/detail/meta/type_traits.hpp \
+  /usr/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /usr/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /usr/include/nlohmann/detail/meta/call_std/end.hpp \
+  /usr/include/nlohmann/json_fwd.hpp \
+  /usr/include/nlohmann/detail/string_concat.hpp \
+  /usr/include/c++/12/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/nlohmann/detail/meta/identity_tag.hpp \
+  /usr/include/nlohmann/detail/meta/std_fs.hpp \
+  /usr/include/c++/12/filesystem \
+  /usr/include/c++/12/bits/fs_fwd.h \
+  /usr/include/c++/12/bits/fs_path.h \
+  /usr/include/c++/12/locale \
+  /usr/include/c++/12/bits/locale_facets_nonio.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h \
+  /usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/12/bits/codecvt.h \
+  /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/12/bits/locale_conv.h \
+  /usr/include/c++/12/iomanip \
+  /usr/include/c++/12/bits/quoted_string.h \
+  /usr/include/c++/12/sstream \
+  /usr/include/c++/12/bits/sstream.tcc \
+  /usr/include/c++/12/codecvt \
+  /usr/include/c++/12/bits/fs_dir.h \
+  /usr/include/c++/12/bits/fs_ops.h \
+  /usr/include/nlohmann/detail/conversions/to_json.hpp \
+  /usr/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /usr/include/nlohmann/byte_container_with_subtype.hpp \
+  /usr/include/nlohmann/detail/hash.hpp \
+  /usr/include/nlohmann/detail/input/binary_reader.hpp \
+  /usr/include/nlohmann/detail/input/input_adapters.hpp \
+  /usr/include/nlohmann/detail/input/json_sax.hpp \
+  /usr/include/nlohmann/detail/input/lexer.hpp \
+  /usr/include/nlohmann/detail/meta/is_sax.hpp \
+  /usr/include/nlohmann/detail/input/parser.hpp \
+  /usr/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /usr/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /usr/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /usr/include/nlohmann/detail/json_pointer.hpp \
+  /usr/include/nlohmann/detail/json_ref.hpp \
+  /usr/include/nlohmann/detail/output/binary_writer.hpp \
+  /usr/include/nlohmann/detail/output/output_adapters.hpp \
+  /usr/include/nlohmann/detail/output/serializer.hpp \
+  /usr/include/nlohmann/detail/conversions/to_chars.hpp \
+  /usr/include/nlohmann/ordered_map.hpp \
+  /usr/include/c++/12/any \
+  /usr/include/nlohmann/detail/macro_unscope.hpp \
+  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   /home/zaid/env-monitor/firmware/src/sensors/hcsr04.h \
-  /home/zaid/env-monitor/firmware/src/sensors/dht22.h
+  /home/zaid/env-monitor/firmware/src/sensors/dht22.h \
+  /home/zaid/env-monitor/firmware/src/mqtt_publisher.h \
+  /usr/include/mqtt/client.h \
+  /usr/include/mqtt/async_client.h \
+  /usr/include/MQTTAsync.h \
+  /usr/include/MQTTExportDeclarations.h \
+  /usr/include/MQTTProperties.h \
+  /usr/include/MQTTReasonCodes.h \
+  /usr/include/MQTTSubscribeOpts.h \
+  /usr/include/MQTTClientPersistence.h \
+  /usr/include/mqtt/types.h \
+  /usr/include/mqtt/token.h \
+  /usr/include/mqtt/iaction_listener.h \
+  /usr/include/mqtt/exception.h \
+  /usr/include/mqtt/properties.h \
+  /usr/include/MQTTProperties.h \
+  /usr/include/mqtt/buffer_ref.h \
+  /usr/include/mqtt/string_collection.h \
+  /usr/include/mqtt/server_response.h \
+  /usr/include/c++/12/mutex \
+  /usr/include/c++/12/bits/std_mutex.h \
+  /usr/include/c++/12/bits/unique_lock.h \
+  /usr/include/c++/12/condition_variable \
+  /usr/include/mqtt/create_options.h \
+  /usr/include/mqtt/delivery_token.h \
+  /usr/include/mqtt/message.h \
+  /usr/include/mqtt/iclient_persistence.h \
+  /usr/include/mqtt/buffer_view.h \
+  /usr/include/mqtt/callback.h \
+  /usr/include/mqtt/thread_queue.h \
+  /usr/include/c++/12/deque \
+  /usr/include/c++/12/bits/stl_deque.h \
+  /usr/include/c++/12/bits/deque.tcc \
+  /usr/include/c++/12/queue \
+  /usr/include/c++/12/bits/stl_queue.h \
+  /usr/include/mqtt/iasync_client.h \
+  /usr/include/mqtt/connect_options.h \
+  /usr/include/mqtt/topic.h \
+  /usr/include/mqtt/subscribe_options.h \
+  /usr/include/MQTTSubscribeOpts.h \
+  /usr/include/mqtt/will_options.h \
+  /usr/include/mqtt/ssl_options.h \
+  /usr/include/mqtt/disconnect_options.h \
+  /usr/include/c++/12/list \
+  /usr/include/c++/12/bits/stl_list.h \
+  /usr/include/c++/12/bits/list.tcc \
+  /usr/include/c++/12/future \
+  /usr/include/c++/12/bits/atomic_futex.h \
+  /usr/include/c++/12/atomic
 
 CMakeFiles/sensor_daemon.dir/src/mqtt_publisher.cpp.o: /home/zaid/env-monitor/firmware/src/mqtt_publisher.cpp \
   /usr/include/stdc-predef.h \
@@ -904,7 +1108,7 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
   /usr/include/c++/12/bits/istream.tcc
 
 
-/usr/include/c++/12/bits/sstream.tcc:
+/home/zaid/env-monitor/firmware/src/mqtt_publisher.cpp:
 
 /usr/include/c++/12/bits/atomic_futex.h:
 
@@ -914,45 +1118,15 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/stl_list.h:
 
-/usr/include/c++/12/list:
-
-/usr/include/c++/12/compare:
-
-/usr/include/c++/12/array:
-
-/usr/include/c++/12/bits/unordered_map.h:
-
-/usr/include/c++/12/bits/enable_special_members.h:
-
-/usr/include/c++/12/bits/hashtable_policy.h:
-
-/usr/include/c++/12/bits/hashtable.h:
-
-/usr/include/c++/12/unordered_map:
-
-/usr/include/c++/12/bits/std_function.h:
-
-/usr/include/c++/12/functional:
-
 /usr/include/mqtt/will_options.h:
 
 /usr/include/mqtt/subscribe_options.h:
-
-/usr/include/mqtt/topic.h:
 
 /usr/include/mqtt/connect_options.h:
 
 /usr/include/mqtt/iasync_client.h:
 
-/usr/include/c++/12/bits/algorithmfwd.h:
-
-/usr/include/c++/12/bits/stl_algo.h:
-
-/usr/include/c++/12/algorithm:
-
 /usr/include/c++/12/bits/stl_queue.h:
-
-/usr/include/c++/12/bits/stl_heap.h:
 
 /usr/include/c++/12/queue:
 
@@ -964,9 +1138,143 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/mqtt/callback.h:
 
+/usr/include/mqtt/buffer_view.h:
+
+/usr/include/mqtt/create_options.h:
+
+/usr/include/c++/12/mutex:
+
+/usr/include/mqtt/server_response.h:
+
+/usr/include/MQTTSubscribeOpts.h:
+
+/usr/include/MQTTReasonCodes.h:
+
+/home/zaid/env-monitor/firmware/src/sensors/dht22.h:
+
+/usr/include/nlohmann/detail/macro_unscope.hpp:
+
+/usr/include/nlohmann/ordered_map.hpp:
+
+/usr/include/mqtt/topic.h:
+
+/usr/include/nlohmann/detail/conversions/to_chars.hpp:
+
+/usr/include/nlohmann/detail/output/serializer.hpp:
+
+/usr/include/nlohmann/detail/output/binary_writer.hpp:
+
+/usr/include/nlohmann/detail/json_pointer.hpp:
+
+/usr/include/nlohmann/detail/iterators/iter_impl.hpp:
+
+/usr/include/nlohmann/detail/input/parser.hpp:
+
+/usr/include/nlohmann/detail/meta/is_sax.hpp:
+
+/usr/include/nlohmann/detail/input/lexer.hpp:
+
+/usr/include/nlohmann/detail/input/binary_reader.hpp:
+
+/usr/include/mqtt/delivery_token.h:
+
+/usr/include/nlohmann/detail/hash.hpp:
+
+/usr/include/c++/12/bits/fs_dir.h:
+
+/usr/include/mqtt/buffer_ref.h:
+
+/usr/include/c++/12/codecvt:
+
+/usr/include/c++/12/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/12/bits/sstream.tcc:
+
+/usr/include/libintl.h:
+
+/usr/include/nlohmann/detail/iterators/primitive_iterator.hpp:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h:
+
+/usr/include/c++/12/locale:
+
+/usr/include/c++/12/list:
+
+/usr/include/c++/12/filesystem:
+
+/usr/include/mqtt/token.h:
+
+/usr/include/string.h:
+
+/usr/include/nlohmann/json_fwd.hpp:
+
+/usr/include/mqtt/exception.h:
+
+/usr/include/nlohmann/detail/meta/call_std/begin.hpp:
+
+/usr/include/nlohmann/detail/meta/type_traits.hpp:
+
+/usr/include/MQTTAsync.h:
+
+/usr/include/nlohmann/detail/meta/cpp_future.hpp:
+
+/usr/include/nlohmann/detail/string_escape.hpp:
+
+/usr/include/assert.h:
+
+/usr/include/c++/12/cassert:
+
+/usr/include/mqtt/types.h:
+
+/usr/include/c++/12/version:
+
+/usr/include/nlohmann/detail/meta/void_t.hpp:
+
+/usr/include/nlohmann/detail/exceptions.hpp:
+
+/usr/include/c++/12/bits/indirect_array.h:
+
+/usr/include/c++/12/bits/mask_array.h:
+
+/usr/include/c++/12/bits/valarray_after.h:
+
+/usr/include/c++/12/bits/slice_array.h:
+
+/usr/include/c++/12/tr1/poly_laguerre.tcc:
+
+/usr/include/c++/12/tr1/legendre_function.tcc:
+
+/usr/include/c++/12/tr1/exp_integral.tcc:
+
+/usr/include/c++/12/tr1/ell_integral.tcc:
+
+/usr/include/c++/12/tr1/beta_function.tcc:
+
+/usr/include/c++/12/tr1/special_function_util.h:
+
+/usr/include/c++/12/tr1/gamma.tcc:
+
+/usr/include/c++/12/bits/specfun.h:
+
+/usr/include/aarch64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/math.h:
+
 /usr/include/c++/12/bits/range_access.h:
 
 /usr/include/c++/12/bits/functexcept.h:
+
+/usr/include/c++/12/tr1/poly_hermite.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/endian.h:
 
@@ -974,7 +1282,13 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/pstl/pstl_config.h:
 
+/usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
+
 /usr/include/c++/12/bits/stl_function.h:
+
+/usr/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
+/usr/include/c++/12/bits/std_function.h:
 
 /usr/include/mqtt/disconnect_options.h:
 
@@ -986,7 +1300,11 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/stl_iterator.h:
 
+/usr/include/c++/12/iomanip:
+
 /usr/include/c++/12/debug/debug.h:
+
+/usr/include/nlohmann/detail/input/position_t.hpp:
 
 /usr/include/c++/12/bits/std_thread.h:
 
@@ -995,6 +1313,8 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 /usr/include/aarch64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/c++/12/bits/uses_allocator.h:
+
+/usr/include/c++/12/bits/valarray_before.h:
 
 /usr/include/c++/12/bits/stl_iterator_base_types.h:
 
@@ -1006,9 +1326,11 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/shared_ptr.h:
 
-/usr/include/c++/12/string:
-
 /usr/include/strings.h:
+
+/usr/include/c++/12/bits/forward_list.tcc:
+
+/usr/include/c++/12/string:
 
 /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h:
 
@@ -1024,25 +1346,15 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/basic_string.h:
 
-/usr/include/MQTTReasonCodes.h:
-
 /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/c++/12/bits/uniform_int_dist.h:
-
-/usr/include/c++/12/bits/ptr_traits.h:
-
-/usr/include/aarch64-linux-gnu/bits/types/clockid_t.h:
-
 /usr/include/c++/12/bits/allocator.h:
 
 /usr/include/aarch64-linux-gnu/bits/floatn.h:
-
-/usr/include/c++/12/cerrno:
 
 /usr/include/c++/12/stdlib.h:
 
@@ -1051,6 +1363,8 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 /usr/include/c++/12/bits/align.h:
 
 /usr/include/c++/12/bits/exception_defines.h:
+
+/usr/include/c++/12/bits/codecvt.h:
 
 /usr/include/c++/12/bits/cpp_type_traits.h:
 
@@ -1062,7 +1376,17 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/iostream:
 
+/usr/include/mqtt/iaction_listener.h:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/gthr-default.h:
+
 /usr/include/aarch64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/12/cstring:
+
+/usr/include/ctype.h:
+
+/usr/include/nlohmann/detail/input/input_adapters.hpp:
 
 /usr/include/c++/12/bits/stl_algobase.h:
 
@@ -1070,15 +1394,19 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/istream:
 
+/usr/include/nlohmann/detail/conversions/to_json.hpp:
+
 /usr/include/c++/12/backward/auto_ptr.h:
 
 /usr/include/aarch64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h:
 
-/home/zaid/env-monitor/firmware/src/sensors/dht22.h:
-
 /usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h:
+
+/usr/include/MQTTProperties.h:
+
+/usr/include/c++/12/bits/locale_facets.tcc:
 
 /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h:
 
@@ -1090,11 +1418,21 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/postypes.h:
 
+/usr/include/nlohmann/byte_container_with_subtype.hpp:
+
 /usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h:
 
-/usr/include/aarch64-linux-gnu/bits/types/timer_t.h:
+/usr/include/c++/12/bits/unique_lock.h:
 
-/usr/include/mqtt/server_response.h:
+/usr/include/nlohmann/detail/iterators/iteration_proxy.hpp:
+
+/usr/include/c++/12/bits/stl_pair.h:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/error_constants.h:
+
+/usr/include/c++/12/bits/memoryfwd.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/c++/12/iosfwd:
 
@@ -1102,31 +1440,43 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/stdc-predef.h:
 
-/usr/include/c++/12/ios:
+/usr/include/c++/12/utility:
 
 /usr/include/c++/12/bits/stl_tree.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_sched_param.h:
 
-/usr/include/c++/12/cstdint:
-
 /usr/include/c++/12/ext/atomicity.h:
 
 /usr/include/c++/12/bits/node_handle.h:
 
+/usr/include/c++/12/bits/stl_relops.h:
+
 /usr/include/aarch64-linux-gnu/bits/timex.h:
+
+/usr/include/mqtt/string_collection.h:
+
+/usr/include/c++/12/streambuf:
 
 /usr/include/wchar.h:
 
 /usr/include/aarch64-linux-gnu/bits/struct_mutex.h:
 
+/usr/include/c++/12/bits/fs_fwd.h:
+
 /usr/include/aarch64-linux-gnu/bits/types.h:
 
 /usr/include/aarch64-linux-gnu/bits/setjmp.h:
 
+/usr/include/c++/12/tr1/bessel_function.tcc:
+
 /usr/include/c++/12/cwchar:
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/aarch64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/nlohmann/detail/abi_macros.hpp:
 
 /usr/include/c++/12/bits/refwrap.h:
 
@@ -1138,11 +1488,15 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/locale_classes.h:
 
+/usr/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+
 /usr/include/c++/12/bits/stringfwd.h:
 
 /usr/include/aarch64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/aarch64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/nlohmann/detail/macro_scope.hpp:
 
 /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h:
 
@@ -1156,9 +1510,15 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/aarch64-linux-gnu/bits/sched.h:
 
+/usr/include/nlohmann/detail/meta/detected.hpp:
+
 /usr/include/c++/12/system_error:
 
+/usr/include/nlohmann/detail/conversions/from_json.hpp:
+
 /usr/include/c++/12/type_traits:
+
+/usr/include/nlohmann/detail/output/output_adapters.hpp:
 
 /usr/include/aarch64-linux-gnu/bits/wchar.h:
 
@@ -1170,9 +1530,17 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/asm-generic/errno-base.h:
 
+/usr/include/nlohmann/detail/json_ref.hpp:
+
+/usr/include/c++/12/cmath:
+
 /usr/include/c++/12/debug/assertions.h:
 
 /usr/include/c++/12/bits/std_abs.h:
+
+/usr/include/c++/12/bits/ptr_traits.h:
+
+/usr/include/c++/12/bits/uniform_int_dist.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/12/include/stdint.h:
 
@@ -1182,13 +1550,29 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/new_allocator.h:
 
+/usr/include/c++/12/cerrno:
+
+/usr/include/c++/12/cstddef:
+
+/usr/include/aarch64-linux-gnu/bits/math-vector.h:
+
 /usr/include/aarch64-linux-gnu/gnu/stubs.h:
+
+/usr/include/aarch64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdint-intn.h:
 
+/usr/include/c++/12/tr1/riemann_zeta.tcc:
+
 /usr/include/c++/12/bits/basic_ios.tcc:
 
+/usr/include/c++/12/any:
+
 /usr/include/c++/12/ctime:
+
+/usr/include/c++/12/bits/fs_path.h:
+
+/usr/include/aarch64-linux-gnu/bits/flt-eval-method.h:
 
 /usr/include/locale.h:
 
@@ -1199,6 +1583,8 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 /usr/include/aarch64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/aarch64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/aarch64-linux-gnu/bits/types/FILE.h:
 
@@ -1218,19 +1604,33 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/new:
 
-/usr/include/c++/12/mutex:
+/usr/include/mqtt/iclient_persistence.h:
 
-/usr/include/mqtt/buffer_view.h:
+/usr/include/aarch64-linux-gnu/bits/time.h:
+
+/usr/include/MQTTExportDeclarations.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/12/bits/std_mutex.h:
+
+/usr/include/aarch64-linux-gnu/c++/12/bits/gthr.h:
 
 /usr/include/aarch64-linux-gnu/bits/locale.h:
 
 /usr/include/aarch64-linux-gnu/bits/floatn-common.h:
 
+/usr/include/c++/12/bits/quoted_string.h:
+
 /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/c++/12/bits/gslice.h:
 
 /usr/include/c++/12/pstl/glue_algorithm_defs.h:
 
 /usr/include/c++/12/bits/localefwd.h:
+
+/usr/include/c++/12/bits/locale_facets_nonio.h:
 
 /usr/include/aarch64-linux-gnu/bits/stdlib-float.h:
 
@@ -1262,6 +1662,8 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/aarch64-linux-gnu/bits/long-double.h:
 
+/usr/include/c++/12/bits/hashtable_policy.h:
+
 /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/aarch64-linux-gnu/bits/timesize.h:
@@ -1280,6 +1682,8 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/aarch64-linux-gnu/c++/12/bits/c++locale.h:
 
+/usr/include/c++/12/tr1/hypergeometric.tcc:
+
 /usr/include/c++/12/cwctype:
 
 /usr/include/c++/12/tuple:
@@ -1288,7 +1692,15 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/stdio.h:
 
+/usr/include/c++/12/tr1/modified_bessel_func.tcc:
+
 /usr/include/stdlib.h:
+
+/usr/include/mqtt/async_client.h:
+
+/usr/include/c++/12/bits/vector.tcc:
+
+/usr/include/c++/12/ext/string_conversions.h:
 
 /usr/include/c++/12/cstdlib:
 
@@ -1298,15 +1710,11 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/aarch64-linux-gnu/sys/types.h:
 
-/usr/include/alloca.h:
-
-/usr/include/MQTTExportDeclarations.h:
-
 /usr/include/aarch64-linux-gnu/bits/waitflags.h:
 
-/usr/include/c++/12/bits/predefined_ops.h:
-
 /usr/include/mqtt/client.h:
+
+/usr/include/c++/12/bits/predefined_ops.h:
 
 /usr/include/stdint.h:
 
@@ -1315,6 +1723,8 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 /usr/include/endian.h:
 
 /usr/include/gpiod.h:
+
+/usr/include/c++/12/bits/hashtable.h:
 
 /usr/include/c++/12/ext/concurrence.h:
 
@@ -1329,6 +1739,8 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h:
 
 /usr/include/aarch64-linux-gnu/sys/select.h:
+
+/usr/include/nlohmann/detail/value_t.hpp:
 
 /usr/include/c++/12/cstdio:
 
@@ -1350,15 +1762,21 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/errno.h:
 
+/usr/include/nlohmann/detail/iterators/internal_iterator.hpp:
+
 /usr/include/aarch64-linux-gnu/bits/errno.h:
 
 /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h:
 
 /usr/include/linux/errno.h:
 
+/usr/include/c++/12/bits/valarray_array.tcc:
+
 /usr/include/aarch64-linux-gnu/bits/types/error_t.h:
 
-/usr/include/MQTTAsync.h:
+/usr/include/c++/12/cstdint:
+
+/usr/include/nlohmann/adl_serializer.hpp:
 
 /usr/include/c++/12/bits/streambuf.tcc:
 
@@ -1374,9 +1792,13 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/wctype.h:
 
+/usr/include/c++/12/forward_list:
+
 /usr/include/c++/12/bits/streambuf_iterator.h:
 
 /usr/include/c++/12/vector:
+
+/usr/include/c++/12/numeric:
 
 /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h:
 
@@ -1394,39 +1816,67 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/limits:
 
-/usr/include/c++/12/streambuf:
-
-/usr/include/mqtt/string_collection.h:
-
 /usr/include/c++/12/chrono:
+
+/usr/include/nlohmann/detail/meta/std_fs.hpp:
 
 /usr/include/c++/12/bits/atomic_base.h:
 
 /usr/lib/gcc/aarch64-linux-gnu/12/include/stdbool.h:
 
-/home/zaid/env-monitor/firmware/src/mqtt_publisher.cpp:
+/usr/include/nlohmann/json.hpp:
 
-/usr/include/c++/12/bits/vector.tcc:
+/usr/include/c++/12/algorithm:
 
-/usr/include/c++/12/ext/string_conversions.h:
+/usr/include/c++/12/bits/stl_algo.h:
 
-/usr/include/mqtt/async_client.h:
+/usr/include/nlohmann/detail/string_concat.hpp:
 
-/usr/include/c++/12/bits/locale_facets.tcc:
+/usr/include/c++/12/bits/algorithmfwd.h:
 
-/usr/include/MQTTProperties.h:
+/usr/include/c++/12/bits/fs_ops.h:
 
-/usr/include/MQTTSubscribeOpts.h:
+/usr/include/c++/12/bits/stl_heap.h:
 
-/usr/include/mqtt/types.h:
+/usr/include/c++/12/functional:
+
+/usr/include/c++/12/unordered_map:
+
+/usr/include/c++/12/bits/enable_special_members.h:
+
+/usr/include/c++/12/bits/unordered_map.h:
+
+/usr/include/c++/12/bits/valarray_array.h:
+
+/usr/include/c++/12/bits/erase_if.h:
+
+/usr/include/c++/12/bits/locale_conv.h:
 
 /usr/include/c++/12/bits/stl_uninitialized.h:
 
-/usr/include/mqtt/token.h:
-
-/usr/include/string.h:
+/usr/include/nlohmann/detail/meta/identity_tag.hpp:
 
 /usr/include/c++/12/bits/stl_bvector.h:
+
+/usr/include/c++/12/array:
+
+/usr/include/nlohmann/detail/input/json_sax.hpp:
+
+/usr/include/nlohmann/detail/meta/call_std/end.hpp:
+
+/usr/include/c++/12/valarray:
+
+/usr/include/c++/12/compare:
+
+/usr/include/mqtt/message.h:
+
+/usr/include/c++/12/bits/unique_ptr.h:
+
+/usr/include/c++/12/iterator:
+
+/usr/include/c++/12/ios:
+
+/usr/include/c++/12/bits/stream_iterator.h:
 
 /usr/include/c++/12/memory:
 
@@ -1438,25 +1888,23 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/shared_ptr_base.h:
 
+/usr/include/nlohmann/detail/iterators/iterator_traits.hpp:
+
 /usr/include/c++/12/bits/nested_exception.h:
 
 /usr/include/c++/12/bits/allocated_ptr.h:
 
 /usr/include/c++/12/bits/shared_ptr_atomic.h:
 
+/usr/include/c++/12/bits/gslice_array.h:
+
 /usr/include/c++/12/bits/atomic_lockfree_defines.h:
 
-/usr/include/aarch64-linux-gnu/c++/12/bits/gthr-default.h:
+/usr/include/c++/12/bits/stl_numeric.h:
 
-/usr/include/mqtt/iaction_listener.h:
+/usr/include/c++/12/pstl/glue_numeric_defs.h:
 
-/usr/include/mqtt/exception.h:
-
-/usr/include/mqtt/buffer_ref.h:
-
-/usr/include/ctype.h:
-
-/usr/include/c++/12/cstring:
+/usr/include/c++/12/bits/forward_list.h:
 
 /usr/include/c++/12/bits/charconv.h:
 
@@ -1464,34 +1912,8 @@ CMakeFiles/sensor_daemon.dir/src/sensors/hcsr04.cpp.o: /home/zaid/env-monitor/fi
 
 /usr/include/c++/12/bits/stl_map.h:
 
-/usr/include/c++/12/bits/unique_ptr.h:
-
-/usr/include/mqtt/message.h:
-
-/usr/include/c++/12/bits/erase_if.h:
-
-/usr/include/aarch64-linux-gnu/c++/12/bits/gthr.h:
-
-/usr/include/c++/12/bits/std_mutex.h:
-
-/usr/include/c++/12/bits/stl_pair.h:
-
-/usr/include/aarch64-linux-gnu/c++/12/bits/error_constants.h:
-
-/usr/include/c++/12/bits/memoryfwd.h:
-
-/usr/include/c++/12/bits/unique_lock.h:
+/usr/include/c++/12/condition_variable:
 
 /usr/include/aarch64-linux-gnu/bits/time64.h:
 
 /usr/include/c++/12/bits/stl_multimap.h:
-
-/usr/include/c++/12/condition_variable:
-
-/usr/include/mqtt/create_options.h:
-
-/usr/include/mqtt/delivery_token.h:
-
-/usr/include/aarch64-linux-gnu/bits/time.h:
-
-/usr/include/mqtt/iclient_persistence.h:
