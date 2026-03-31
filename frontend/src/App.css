@@ -66,3 +66,10 @@ body {
 .range-buttons button.active { background: #3b82f6; color: white; border-color: #3b82f6; }
 
 .loading, .empty { text-align: center; color: #64748b; padding: 60px 0; }
+
+.nav { display: flex; gap: 8px; margin-top: 16px; }
+.nav-link {
+  padding: 8px 16px; border-radius: 8px; text-decoration: none;
+  color: #94a3b8; font-size: 14px; border: 1px solid #334155;
+}
+.nav-link.active { background: #3b82f6; color: white; border-color: #3b82f6; }
