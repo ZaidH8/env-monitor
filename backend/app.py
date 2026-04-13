@@ -1,3 +1,5 @@
+import eventlet
+eventlet.monkey_patch()
 import logging
 import threading
 from flask import Flask, jsonify, request
@@ -5,6 +7,9 @@ from flask_socketio import SocketIO
 from flask_cors import CORS
 import database
 import mqtt_subscriber
+import os
+from flask import send_from_directory
+
 
 # Set up logging
 logging.basicConfig(
@@ -13,7 +18,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=None)
 CORS(app)  # Allow requests from React (running on a different port)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
@@ -87,6 +92,16 @@ def handle_disconnect():
 # ─────────────────────────────────────────
 # STARTUP
 # ─────────────────────────────────────────
+
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
+def serve_react(path):
+    build_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../frontend/build"))
+    full_path = os.path.join(build_dir, path)
+    if path and os.path.exists(full_path):
+        return send_from_directory(build_dir, path)
+    return send_from_directory(build_dir, "index.html")
+
 
 def start():
     # Initialize database

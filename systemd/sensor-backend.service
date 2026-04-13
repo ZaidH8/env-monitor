@@ -1,0 +1,16 @@
+[Unit]
+Description=Smart Env Monitor — Python Flask Backend
+After=network.target mosquitto.service sensor-daemon.service
+
+[Service]
+Type=simple
+User=zaid
+WorkingDirectory=/home/zaid/env-monitor/backend
+ExecStart=/home/zaid/env-monitor/backend/venv/bin/python3 app.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

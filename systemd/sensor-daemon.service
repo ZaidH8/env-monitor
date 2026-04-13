@@ -1,0 +1,17 @@
+[Unit]
+Description=Smart Env Monitor — C++ Sensor Daemon
+After=network.target mosquitto.service
+Requires=mosquitto.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/zaid/env-monitor/firmware/build
+ExecStart=/home/zaid/env-monitor/firmware/build/sensor_daemon
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
