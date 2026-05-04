@@ -31,7 +31,6 @@ ClimateReading DHT22::read() {
     }
     pclose(pipe);
 
-    // Remove trailing newline
     if (!output.empty() && output.back() == '\n') {
         output.pop_back();
     }
@@ -41,7 +40,6 @@ ClimateReading DHT22::read() {
         return result;
     }
 
-    // Parse "temperature,humidity"
     std::stringstream ss(output);
     std::string temp_str, humidity_str;
 

@@ -6,7 +6,7 @@ import adafruit_dht
 
 dht = adafruit_dht.DHT22(board.D17, use_pulseio=False)
 
-# Try up to 5 times
+#Try 5 times
 for attempt in range(5):
     try:
         temperature = dht.temperature

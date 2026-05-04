@@ -4,7 +4,7 @@
 // Holds the result of one distance measurement
 struct DistanceReading {
     float distance_cm;
-    bool valid;  // false if sensor timed out or gave garbage data
+    bool valid;  
 };
 
 class HCSR04 {

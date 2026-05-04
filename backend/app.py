@@ -11,7 +11,7 @@ import os
 from flask import send_from_directory
 
 
-# Set up logging
+#Set up logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s: %(message)s"
@@ -19,16 +19,12 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__, static_folder=None)
-CORS(app)  # Allow requests from React (running on a different port)
+CORS(app)  
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Give the MQTT subscriber a reference to socketio
-# so it can push new readings to the browser
+
 mqtt_subscriber.set_socketio(socketio)
 
-# ─────────────────────────────────────────
-# REST API ENDPOINTS
-# ─────────────────────────────────────────
 
 @app.route("/api/status")
 def status():
@@ -73,14 +69,10 @@ def stats_today():
         return jsonify({"error": "No data for today yet"}), 404
     return jsonify(stats)
 
-# ─────────────────────────────────────────
-# WEBSOCKET EVENTS
-# ─────────────────────────────────────────
 
 @socketio.on("connect")
 def handle_connect():
     logger.info("Browser client connected via WebSocket")
-    # Send the most recent reading immediately when a browser connects
     recent = database.get_recent(1)
     if recent:
         socketio.emit("new_reading", recent[0])
@@ -89,9 +81,7 @@ def handle_connect():
 def handle_disconnect():
     logger.info("Browser client disconnected")
 
-# ─────────────────────────────────────────
-# STARTUP
-# ─────────────────────────────────────────
+
 
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
@@ -104,14 +94,14 @@ def serve_react(path):
 
 
 def start():
-    # Initialize database
+    #Initialize database
     database.init_db()
 
-    # Start MQTT subscriber in background thread
+    #Start MQTT subscriber in background thread
     mqtt_subscriber.start_subscriber()
     logger.info("MQTT subscriber started")
 
-    # Start Flask with WebSocket support
+    #Start Flask with WebSocket support
     logger.info("Starting web server on port 5000")
     socketio.run(app, host="0.0.0.0", port=5000, debug=False)
 

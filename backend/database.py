@@ -9,7 +9,7 @@ DB_PATH = "/home/zaid/env-monitor/backend/sensor_data.db"
 def get_connection():
     """Get a database connection. Creates the database file if it doesn't exist."""
     conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row  # Rows behave like dictionaries
+    conn.row_factory = sqlite3.Row  
     return conn
 
 def init_db():
@@ -28,7 +28,6 @@ def init_db():
         )
     """)
 
-    # Index on timestamp makes time-range queries fast
     cursor.execute("""
         CREATE INDEX IF NOT EXISTS idx_timestamp ON readings(timestamp)
     """)
@@ -38,19 +37,13 @@ def init_db():
     logger.info("Database initialized at %s", DB_PATH)
 
 def insert_reading(data: dict) -> bool:
-    """
-    Insert one sensor reading into the database.
-    Returns True on success, False on failure.
-    """
     try:
-        # Validate required fields exist
         required = ["timestamp", "temperature", "humidity", "distance_cm", "occupied"]
         for field in required:
             if field not in data:
                 logger.error("Missing field in reading: %s", field)
                 return False
 
-        # Validate ranges
         if not (-40 <= data["temperature"] <= 80):
             logger.error("Temperature out of range: %s", data["temperature"])
             return False
@@ -107,7 +100,6 @@ def get_range(start_timestamp: int, end_timestamp: int) -> list:
 def get_stats_today() -> dict:
     """Get min, max, and average temperature and humidity for today."""
     import time
-    # Start of today in Unix time
     today_start = int(datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp())
 
     conn = get_connection()

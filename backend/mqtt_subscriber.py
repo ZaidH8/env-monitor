@@ -9,7 +9,6 @@ BROKER_ADDRESS = "localhost"
 BROKER_PORT = 1883
 TOPIC = "sensors/room1/data"
 
-# This will be set by app.py so the subscriber can emit WebSocket events
 socketio_instance = None
 
 def set_socketio(socketio):
@@ -65,8 +64,6 @@ def start_subscriber():
 
     client.connect(BROKER_ADDRESS, BROKER_PORT)
 
-    # loop_start runs the MQTT client in a background thread
-    # This means it does not block the rest of your program
     client.loop_start()
     logger.info("MQTT subscriber started in background thread")
     return client

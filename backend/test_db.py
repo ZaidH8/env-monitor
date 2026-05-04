@@ -3,7 +3,6 @@ import logging
 import database
 import mqtt_subscriber
 
-# Set up logging so you can see what is happening
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(name)s: %(message)s"

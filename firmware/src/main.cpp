@@ -10,16 +10,15 @@
 
 using json = nlohmann::json;
 
-// Room is considered occupied if something is within 200cm
+//Room is considered "occupied" if something is within 200cm
 const float OCCUPANCY_THRESHOLD_CM = 200.0f;
 
-// How often to publish readings (seconds)
+// How often to publish readings
 const int PUBLISH_INTERVAL_SEC = 2;
 
 int main() {
     std::cout << "Smart Environment Monitor starting...\n";
 
-    // Open GPIO chip (gpiochip4 for Pi 5, gpiochip0 for Pi 4)
     gpiod_chip* chip = gpiod_chip_open_by_name("gpiochip4");
     if (!chip) {
         std::cerr << "ERROR: Could not open GPIO chip\n";
@@ -29,10 +28,8 @@ int main() {
     HCSR04 ultrasonic(chip, 23, 24);
     DHT22 climate(chip, 4);
 
-    // Connect to MQTT broker
     MQTTPublisher mqtt("tcp://localhost:1883", "sensor_daemon");
 
-    // Keep trying to connect until it works
     while (!mqtt.connect()) {
         std::cerr << "MQTT: retrying in 5 seconds...\n";
         std::this_thread::sleep_for(std::chrono::seconds(5));
@@ -42,18 +39,15 @@ int main() {
               << PUBLISH_INTERVAL_SEC << " seconds\n";
 
     while (true) {
-        // Read both sensors
         DistanceReading dist = ultrasonic.read();
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
         ClimateReading climate_data = climate.read();
 
-        // Only publish if both readings are valid
+        //Only publish if both readings are valid
         if (dist.valid && climate_data.valid) {
-            // Get current Unix timestamp
             long timestamp = std::chrono::duration_cast<std::chrono::seconds>(
                 std::chrono::system_clock::now().time_since_epoch()).count();
 
-            // Build JSON payload
             json payload;
             payload["timestamp"] = timestamp;
             payload["temperature"] = climate_data.temperature_c;
@@ -63,7 +57,7 @@ int main() {
 
             std::string json_str = payload.dump();
 
-            // Reconnect if connection was lost
+            //Reconnect if connection was lost
             if (!mqtt.is_connected()) {
                 std::cerr << "MQTT: connection lost, reconnecting...\n";
                 mqtt.connect();

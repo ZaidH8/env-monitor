@@ -17,9 +17,7 @@ bool MQTTPublisher::connect() {
         mqtt::connect_options options;
         options.set_keep_alive_interval(20);
         options.set_clean_session(true);
-
-        // Set a Last Will message — this is published automatically if the
-        // client disconnects unexpectedly. Subscribers can detect failures.
+.
         mqtt::will_options will("sensors/room1/status", std::string("offline"), 1, true);
         options.set_will(will);
 
